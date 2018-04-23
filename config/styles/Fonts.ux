@@ -1,0 +1,8 @@
+<Panel ux:Class="StaticFontResources">
+	<Font File="../../assets/fonts/times-new-roman.ttf" ux:Global="times_new_roman" />
+	<Font File="../../assets/fonts/times-new-roman-italic.ttf" ux:Global="times_new_roman_italic" />
+	<Font File="../../assets/fonts/Roboto-Light.ttf" ux:Global="Roboto_Light" />
+	<Font File="../../assets/fonts/Roboto-Bold.ttf" ux:Global="Roboto_Bold" />
+	<Font File="../../assets/fonts/San-Thin.ttf" ux:Global="San_Thin" />
+	<Font File="../../assets/fonts/fontawesome-webfont.ttf" ux:Global="fa" />
+</Panel>

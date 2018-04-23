@@ -1,0 +1,10 @@
+<Panel ux:Class="StaticColorResources">
+	<float4 ux:Global="f_grey" ux:Value="#808080" />
+	<float4 ux:Global="f_white" ux:Value="#FFFFFF" />
+	<float4 ux:Global="f_blue" ux:Value="#0082E2" />
+	<float4 ux:Global="f_skyblue" ux:Value="#ceeafb" />
+	<SolidColor ux:Global="s_grey" Color="#808080" />
+	<SolidColor ux:Global="s_white" Color="#FFFFFF" />
+	<SolidColor ux:Global="s_blue" Color="#0082E2" />
+	<SolidColor ux:Global="s_skyblue" Color="#ceeafb" />
+</Panel>

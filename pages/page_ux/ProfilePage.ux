@@ -1,0 +1,45 @@
+<Panel ux:Class="ProfilePage">
+	<Router ux:Dependency="router" />
+	<ux:Include File="../../config/styles/Icons.ux" />
+		<!-- TODO: find a way to just write individual components and then combine them in ux -->
+	<DockPanel>
+		<StackPanel ItemSpacing="45">
+			<!-- Profile -->
+			<StackPanel Orientation="Horizontal" Background="s_skyblue" Height="156">
+				<Rectangle Width="104" Height="100" Alignment="Left" Margin="25,0,10,20" CornerRadius="50,50,50,50">
+					<ImageFill File="{example_profile_photo}" StretchMode="Uniform" StretchDirection="Both"/>
+				</Rectangle>
+					<StackPanel Padding="20">
+					<Text TextColor="f_blue" Font="Roboto_Light" FontSize="20" Margin="0,5,0,15">@username</Text>
+					<Grid RowCount="2" ColumnCount="2" Width="250" Height="80">
+						<Grid RowCount="2" ColumnCount="1">
+							<Text TextColor="f_blue" Font="Roboto_Light" FontSize="14">Citibank</Text>
+							<Text TextColor="f_blue" Font="Roboto_Light" FontSize="11">01-***7-**08-****-1*</Text>
+						</Grid>
+						
+						<fa_angle_down TextColor="f_blue" Alignment="Left" FontSize="25" />
+						
+						<Grid Width="160" Height="8">
+						<Text Font="San_Thin" FontSize="9">Recent Transaction on 20 Apr, 2017</Text>
+						</Grid>
+					</Grid>
+				</StackPanel>
+			</StackPanel>
+
+			<!-- Account transfer info -->
+			<StackPanel Margin="40,5,0,0" >
+				<Grid RowCount="1" ColumnCount="2" CellSpacing="20">
+					<TextInput Margin="0,0,0,30" PlaceholderText="Amount of money" PlaceholderColor="f_grey" FontSize="13">
+					</TextInput>
+				<!-- TODO: dropdown or combobox or whatever -->
+					<Button Margin="0,0,0,30" Text="HK$ ▼" />
+				</Grid>
+					<TextInput Margin="0,0,0,30" PlaceholderText="Name of the Bank" PlaceholderColor="f_grey" FontSize="13"></TextInput>
+					<TextInput Margin="0,0,0,30" PlaceholderText="Account number" PlaceholderColor="f_grey" FontSize="13"></TextInput>
+				<Button Background="s_blue" Height="50" Width="120" Alignment="Center" Margin="-30,15,0,0" Text="Transfer" Clicked="{logout}"/>
+			</StackPanel>
+		</StackPanel>
+		<NavDock router="router" Dock="Bottom" />
+	    <JavaScript File="../page_js/ProfilePage.js" />
+	</DockPanel>
+</Panel>

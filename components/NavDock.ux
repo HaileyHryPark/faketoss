@@ -1,0 +1,22 @@
+<DockPanel ux:Class="NavDock" Dock="Bottom">
+	<Router ux:Dependency="router" />
+	<Grid Background="#007be6" RowCount="1" ColumnCount="4" Height="54" Alignment="VerticalCenter" >
+		<Grid RowCount="2" ColumnCount="1" HitTestMode="LocalBoundsAndChildren" Clicked="{goToProfilePage}">
+			<Text Font="fa" TextColor="f_white" Alignment="Center" FontSize="18" Margin="0,12,0,0">&#xf015;</Text>
+			<Text Font="fa" TextColor="f_white" Alignment="Center" FontSize="11">Home</Text>
+		</Grid>
+		<Grid RowCount="2" ColumnCount="1" HitTestMode="LocalBoundsAndChildren" Clicked="{goToTransactionsPage}">
+			<Text Font="fa" TextColor="f_white" Alignment="Center" FontSize="18" Margin="0,12,0,0">&#xf0ec;</Text>
+			<Text Value="Transaction" Font="fa" TextColor="f_white" Alignment="Center" FontSize="11" />
+		</Grid>
+		<Grid RowCount="2" ColumnCount="1">
+			<Text Font="fa" TextColor="f_white" Alignment="Center" FontSize="18" Margin="0,12,0,0">&#xf098;</Text>
+			<Text Font="fa" TextColor="f_white" Alignment="Center" FontSize="11">Contacts</Text>
+		</Grid>
+		<Grid RowCount="2" ColumnCount="1">
+			<Text Font="fa" TextColor="f_white" Alignment="Center" FontSize="18" Margin="0,12,0,0">&#xf155;</Text>
+			<Text Font="fa" TextColor="f_white" Alignment="Center" FontSize="11">My Account</Text>
+		</Grid>	
+	</Grid>
+	<JavaScript File="NavDock.js" />
+</DockPanel>

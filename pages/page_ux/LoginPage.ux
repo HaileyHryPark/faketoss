@@ -1,0 +1,66 @@
+<Page ux:Class="LoginPage">
+	<Router ux:Dependency="router" />
+
+	<Rectangle ux:Class="Separator" Height="1">
+		<SolidColor Color="f_blue" />
+	</Rectangle>
+	<Panel>
+		<Panel>
+			<WhileTrue Value="{showWebView}">
+				<NativeViewHost ux:Name="nvh" Background="#ddd">
+					<WebView ux:Name="webView" Url="{url}">
+						<PageLoaded>
+							<EvaluateJS Handler="{pageLoaded}">
+								return { url : document.location.href };
+							</EvaluateJS>
+						</PageLoaded>
+					</WebView>
+
+					<AddingAnimation>
+						<Change nvh.Opacity="0" Duration="0.3" />
+					</AddingAnimation>
+				</NativeViewHost>
+			</WhileTrue>
+		</Panel>
+		
+		<Panel ux:Name="beforeLoginPanel" Visibility="{loginPanelVisibility}">
+			<StackPanel ContentAlignment="Center" >
+				<Panel ux:Name="imagePanel" Margin="10, 10, 10, 0" Height="height(beforeLoginPanel)/3">
+					<Image File="{logo}" Height="height(imagePanel)/2" StretchMode="Uniform" />
+				</Panel>
+				<StackPanel Height="50">
+					<Rectangle ux:Name="usernameTextInputBox" Margin="40, 0, 40, 0" CornerRadius="10">
+						<TextInput PlaceholderText="User Id" PlaceholderColor="f_blue" Padding="10" InputHint="Default" />
+					</Rectangle>
+
+					<Separator Width="width(usernameTextInputBox)" />
+				</StackPanel>
+				<StackPanel Height="50">
+					<Rectangle ux:Name="passwordTextInputBox" Margin="40, 0, 40, 0" CornerRadius="10" >
+						<TextInput  PlaceholderText="Password" PlaceholderColor="f_blue" Padding="10" InputHint="Decimal" IsPassword="true" />
+					</Rectangle>
+
+					<Separator Width="width(passwordTextInputBox)" />
+				</StackPanel>
+				<Button Width="2*width(loginText)" Height="height(usernameTextInputBox)" Margin="10, 20, 10, 10" Clicked="{login}">
+					<Text ux:Name="loginText" Value="LOG IN" Alignment="Center" TextAlignment="Center" Font="times_new_roman_italic" TextColor="f_blue" FontSize="20" />
+				</Button>
+
+				<Panel Height="height(usernameTextInputBox)">
+					<Text Value="OR" Alignment="Center" Font="times_new_roman_italic" TextColor="f_blue" FontSize="15" />
+				</Panel>
+
+				<Rectangle Height="10" />
+
+				<StackPanel ux:Name="LogInWithTextPanel" Orientation="Horizontal" ContentAlignment="Center" Height="height(usernameTextInputBox) * 1.2">
+					<Text Value="Log In With" Font="times_new_roman_italic" TextColor="f_blue" FontSize="17" Alignment="Center" Margin="0, 0, 10, 0" />
+					<Panel Clicked="{login}" HitTestMode="LocalBoundsAndChildren" Height="height(LogInWithTextPanel) * 0.8">
+						<Image File="{facebook_logo}" StretchMode="Uniform" />
+					</Panel>
+				</StackPanel>
+			</StackPanel>
+		</Panel>
+		
+	</Panel>
+	<JavaScript File="../page_js/LoginPage.js" />
+</Page>

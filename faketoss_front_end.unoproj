@@ -1,0 +1,20 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+    "Fuse",
+    "FuseJS",
+    "Fuse.ImageTools"
+  ],
+  "Includes": [
+    "*",
+    "assets/images/*:Bundle",
+    "assets/fonts/*:Bundle",
+    "backend_communication/*.js:Bundle",
+    "backend_mock/*.js:Bundle",
+    "config/*.js:Bundle",
+    "config/styles/*.js:Bundle",
+    "data_types/*.js:Bundle",
+    "pages/page_js/*.js:Bundle",
+    "util/*.js:Bundle"
+  ]
+}

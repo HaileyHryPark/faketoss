@@ -1,0 +1,112 @@
+<Page ux:Class="TransactionsPage">
+	<Router ux:Dependency="router" />
+
+	<Grid ux:Class="Summary" Columns="2*, auto, 2*, auto, 2*" Height="50" Background="s_skyblue">
+		<StackPanel>
+			<Text TextColor="#000000" Alignment="Center" FontSize="11" Margin="0,12,0,0" Font="Roboto_Light">No.Transaction</Text>
+			<Text TextColor="#000000" Alignment="Center" FontSize="15" Font="Roboto_Bold">16</Text>
+		</StackPanel>
+		
+		<Rectangle ux:Class="Divider2" Width="2" Color="f_white" Margin="0,7" />
+		<Divider2 />
+
+		<StackPanel>
+			<Text TextColor="#ff0000" Alignment="Center" FontSize="11" Margin="0,12,0,0" Font="Roboto_Light">Sent</Text>
+			<Text TextColor="#ff0000" Alignment="Center" FontSize="15" Font="Roboto_Bold">700 HKD</Text>
+		</StackPanel>
+
+		<Divider2 />
+
+		<StackPanel>
+			<Text TextColor="#007be6" Alignment="Center" FontSize="11" Margin="0,12,0,0" Font="Roboto_Light">Received</Text>
+			<Text TextColor="#007be6" Alignment="Center" FontSize="15" Font="Roboto_Bold">800 HKD</Text>
+		</StackPanel>
+	</Grid>
+
+	<DockPanel>
+		<Grid ColumnCount="2" Dock="Top" Background="s_skyblue">
+        	<Dropdown Options="{accounts}" Selected="{SelectedAccount}" />
+        	<Dropdown Options="{period}" Selected="{SelectedPeriod}" />
+        </Grid>
+
+        <ScrollView>
+            <StackPanel>
+            	<!-- TODO: show real transactions -->
+                <StackPanel Margin= "7">
+        			<Rectangle Height="25" Background="s_skyblue">
+        				<Text TextColor="f_blue" FontSize="15" Font="Roboto_Bold" Alignment="CenterLeft"> 2017.04.19  12:24 PM</Text>
+        			</Rectangle>
+        			<Text Alignment="CenterLeft" Font="Roboto_Light" FontSize="13"> To : Mom (Citi Bank **** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" TextColor="#ff0000" Alignment="CenterLeft" FontSize="14"> Amount : - 150,000 W</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> From : My Citi Bank Account (**** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> Comment : Happy Wedding Anniversary! :) </Text>
+        		</StackPanel>
+
+        		<StackPanel Margin= "7">
+        			<Rectangle Height="25" Background="s_skyblue">
+        				<Text TextColor="f_blue" FontSize="15" Font="Roboto_Bold" Alignment="CenterLeft"> 2017.04.19  12:22 PM</Text>
+        			</Rectangle>
+        			<Text Alignment="CenterLeft" Font="Roboto_Light" FontSize="13"> To : Dad (Hana Bank **** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" TextColor="#ff0000" Alignment="CenterLeft" FontSize="14"> Amount : - 150,000 W</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> From : My Citi Bank Account (**** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> Comment : Happy Wedding Anniversary! :) </Text>
+        		</StackPanel>
+
+        		<StackPanel Margin= "7">
+        			<Rectangle Height="25" Background="s_skyblue">
+        				<Text TextColor="f_blue" FontSize="15" Font="Roboto_Bold" Alignment="CenterLeft"> 2017.04.02  18:24 PM</Text>
+        			</Rectangle>
+        			<Text Alignment="CenterLeft" Font="Roboto_Light" FontSize="13"> From : Chloe (HangSeng Bank **** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" TextColor="#007be6" Alignment="CenterLeft" FontSize="14"> Amount : + 100 HKD</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> To : My Citi Bank Account (**** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> Comment : Dinner </Text>
+        		</StackPanel>
+
+        		<StackPanel Margin= "7">
+        			<Rectangle Height="25" Background="s_skyblue">
+        				<Text TextColor="f_blue" FontSize="15" Font="Roboto_Bold" Alignment="CenterLeft"> 2017.04.01  09:24 AM</Text>
+        			</Rectangle>
+        			<Text Alignment="CenterLeft" Font="Roboto_Light" FontSize="13"> From : Dad (Hana Bank **** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" TextColor="#007be6" Alignment="CenterLeft" FontSize="14"> Amount : + 5000 HKD</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> To : My Citi Bank Account (**** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> Comment : April Allowance </Text>
+        		</StackPanel>
+
+        		<StackPanel Margin= "7">
+        			<Rectangle Height="25" Background="s_skyblue">
+        				<Text TextColor="f_blue" FontSize="15" Font="Roboto_Bold" Alignment="CenterLeft"> 2017.03.29  23:54 PM</Text>
+        			</Rectangle>
+        			<Text Alignment="CenterLeft" Font="Roboto_Light" FontSize="13"> To : Ye Seul (Citi Bank **** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" TextColor="#ff0000" Alignment="CenterLeft" FontSize="14"> Amount : - 80 HKD</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> From : My Citi Bank Account (**** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> Comment : Dinner </Text>
+        		</StackPanel>
+
+        		<StackPanel Margin= "7">
+        			<Rectangle Height="25" Background="s_skyblue">
+        				<Text TextColor="f_blue" FontSize="15" Font="Roboto_Bold" Alignment="CenterLeft"> 2017.03.22  03:24 PM</Text>
+        			</Rectangle>
+        			<Text Alignment="CenterLeft" Font="Roboto_Light" FontSize="13"> From : Chloe (Citi Bank **** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" TextColor="#007be6" Alignment="CenterLeft" FontSize="14"> Amount :  + 45 HKD</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> To : My Citi Bank Account (**** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> Comment : Lunch </Text>
+        		</StackPanel>
+
+        		<StackPanel Margin= "7">
+        			<Rectangle Height="25" Background="s_skyblue">
+        				<Text TextColor="f_blue" FontSize="15" Font="Roboto_Bold" Alignment="CenterLeft"> 2017.03.10  12:44 PM</Text>
+        			</Rectangle>
+        			<Text Alignment="CenterLeft" Font="Roboto_Light" FontSize="13"> To : Chloe (Citi Bank **** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" TextColor="#ff0000" Alignment="CenterLeft" FontSize="14"> Amount : - 150 HKD</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> From : My Citi Bank Account (**** - **** - ****)</Text>
+        			<Text Font="Roboto_Light" Alignment="CenterLeft" FontSize="13"> Comment : . </Text>
+        		</StackPanel>
+            </StackPanel>
+        </ScrollView>
+        <NavDock Dock="Bottom" router="router" />
+
+        <Summary Dock="Bottom" />
+    </DockPanel>
+
+    <JavaScript File="../page_js/TransactionPage.js" />
+</Page>

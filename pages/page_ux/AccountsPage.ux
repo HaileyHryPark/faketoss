@@ -1,0 +1,61 @@
+<Page ux:Class="AccountsPage">
+	<Router ux:Dependency="router" />
+ 
+ 	<Panel ux:Class="Individual_Account">
+ 		<ScrollView>
+ 			<StackPanel>
+		 		<Rectangle Margin="10,10,10,5" Alignment="Center" Height="140" Width="350" CornerRadius="10,10,10,10">
+		 			<SolidColor Color="f_skyblue" />
+		 			<Grid Columns="8*,2*">
+		 				<StackPanel>
+		 					<Text Margin="15,15,10,10" Font="Roboto_Bold" TextColor="f_blue" Value=" My Citi Bank Account" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Account Number : **** - **** - **** - 4435" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Bank Name : Citi Bank" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Account Holder Name : Harry Park" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Currency : HK$" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Recent Transaction : 2017.04.19" />
+		 				</StackPanel>
+		 				<Text Value="&#xf040;" Font="fa" Color="f_blue" FontSize="15" Alignment="TopRight" Margin="10" />
+		 			</Grid>
+		 		</Rectangle>
+		 		<Rectangle Margin="10,10,10,5" Alignment="Center" Height="140" Width="350" CornerRadius="10,10,10,10">
+		 			<SolidColor Color="f_skyblue" />
+		 			<Grid Columns="8*,2*">
+		 				<StackPanel>
+		 					<Text Margin="15,15,10,10" Font="Roboto_Bold" TextColor="f_blue" Value=" My Hang Seng Bank Account" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Account Number : **** - **** - **** - 1274" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Bank Name : Hang Seng Bank" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Account Holder Name : Harry Park" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Currency : HK$" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Recent Transaction : 2017.04.03" />
+		 				</StackPanel>
+		 				<Text Value="&#xf040;" Font="fa" Color="f_blue" FontSize="15" Alignment="TopRight" Margin="10" />
+		 			</Grid>
+		 		</Rectangle>
+		 		<Rectangle Margin="10,10,10,5" Alignment="Center" Height="140" Width="350" CornerRadius="10,10,10,10">
+		 			<SolidColor Color="f_skyblue" />
+		 			<Grid Columns="8*,2*">
+		 				<StackPanel>
+		 					<Text Margin="15,15,10,10" Font="Roboto_Bold" TextColor="f_blue" Value=" My Hana Bank Account" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Account Number : **** - **** - **** - 7765" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Bank Name : Hana Bank" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Account Holder Name : Harry Park" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Currency : KRW" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="      Recent Transaction : 2017.01.21" />
+		 				</StackPanel>
+		 				<Text Value="&#xf040;" Font="fa" Color="f_blue" FontSize="15" Alignment="TopRight" Margin="10" />
+		 			</Grid>
+	 			</Rectangle>
+	 		</StackPanel>
+	 	</ScrollView>
+ 	</Panel>
+
+	<DockPanel>
+		<Panel Height="50" Background="s_blue" Dock="Top">
+			<Text Alignment="Center" Margin="15" FontSize="20" TextColor="f_white" Font="Roboto_Bold" Value="My Accounts" />
+			<Text Value="&#xf013;" Font="fa" Color="f_white" FontSize="20" Alignment="CenterRight" Margin="15" />
+		</Panel>
+		<Individual_Account Dock="Top" />
+		<NavDock Dock="Bottom" router="router" />
+	</DockPanel>
+</Page>

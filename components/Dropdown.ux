@@ -1,0 +1,67 @@
+<Panel ux:Class="Dropdown" Alignment="Top" Margin="5">
+	<object ux:Property="Options" />
+	<object ux:Property="Selected" />
+
+	<Panel ux:Name="DropdownHeader" Color="f_blue" Clicked="{toggleOpen}" HitTestMode="LocalBoundsAndChildren">
+		<Text Margin="20" TextColor="f_white" Alignment="CenterLeft" Value="{selected}" />
+		<Text Value="&#xf107;" Font="fa" Color="f_white" FontSize="20" Alignment="CenterRight" Margin="18" />
+		<WhilePressed>
+			<Change DropdownHeader.Color="#0068b3" Duration="0.05" DurationBack="0.1" />
+		</WhilePressed>
+	</Panel> 
+	<Panel ux:Name="DropdownList" Color="f_skyblue" LayoutRole="Inert" Alignment="Top" MaxHeight="300">
+		<Translation RelativeTo="Size" RelativeNode="this" Y="1" />
+		<ScrollView>
+			<StackPanel>
+				<Each Items="{options}">
+					<Panel ux:Name="item" Color="f_skyblue" Clicked="{clicked}">
+						<Text Color="f_blue" Margin="10" TextColor="#000000" FontSize="15" Value="{title}" />
+						<WhilePressed>
+							<Change item.Color="#b8e0f9" Duration="0.05" DurationBack="0.1" />
+						</WhilePressed>
+						<WhileTrue Value="{isSelected}">
+							<Change item.Color="#a1d6f7" />
+						</WhileTrue>
+					</Panel>
+				</Each> 
+			</StackPanel>
+		</ScrollView>
+		<WhileFalse Value="{isOpen}">
+			<Change DropdownList.Opacity="0" Duration="0.15" Easing="CubicOut" />
+			<Change DropdownList.Visibility="Hidden" Delay="0.2" />
+			<Move Y="-300" Duration="0.2" Easing="CubicIn" />
+		</WhileFalse>
+	</Panel>
+
+	<JavaScript>
+		var Observable = require("FuseJS/Observable");
+
+		var self = this;
+
+		var isOpen = Observable(false);
+
+		var options = self.Options.inner();
+
+		var selected = self.Selected.inner();
+
+		module.exports = {
+			isOpen: isOpen,
+			options: options.map(function(option) {
+				return {
+					title: option,
+					isSelected: Observable(function() {
+						return selected.value === option;
+					}),
+					clicked: function() {
+						selected.value = option;
+						isOpen.value = false;
+					}
+				}
+			}),
+			selected: selected,
+			toggleOpen: function() {
+				isOpen.value = !isOpen.value;
+			}
+		}
+	</JavaScript>
+</Panel>

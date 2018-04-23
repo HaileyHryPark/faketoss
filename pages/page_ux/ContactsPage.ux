@@ -1,0 +1,142 @@
+<Page ux:Class="ContactsPage">
+	<Router ux:Dependency="router" />
+
+	<Panel ux:Class="Contacts">
+ 		<ScrollView>
+ 			<StackPanel>
+		 		<Rectangle Margin="10,10,10,5" CornerRadius="10,10,10,10" Alignment="Center" Height="120" Width="350">
+		 			<SolidColor Color="f_skyblue" />
+		 			<Grid Columns="3*,6*,1*">
+		 				<Grid Rows="7*,2*">
+		 					<Rectangle Width="70" Height="70" Alignment="BottomCenter" Margin="10,10,10,10" CornerRadius="50,50,50,50" Color="f_white">
+								<ImageFill File="{example_profile_photo}" StretchMode="Uniform" StretchDirection="Both"/>
+							</Rectangle>
+							<Text Value=" Mom" Font="Roboto_Bold" TextColor="f_blue" TextAlignment="Center" />
+		 				</Grid>
+		 				<StackPanel ContentAlignment="CenterLeft">
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Number : **** - **** - **** - 7065" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Bank Name : Hana Bank" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Holder Name : Song Hee Lee" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Currency : KRW" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Recent Transaction : 2017.04.19" />
+		 				</StackPanel>
+		 				<Grid RowCount="2">
+		 					<Text Value="&#xf142;" Font="fa" Color="f_blue" FontSize="20" Alignment="TopCenter" Margin="10" />
+		 					<Text Value="&#xf005;" Font="fa" Color="f_blue" FontSize="15" Alignment="BottomRight" Margin="10" />
+		 				</Grid>
+
+		 			</Grid>
+		 		</Rectangle>
+
+		 		<Rectangle Margin="10,10,10,5" CornerRadius="10,10,10,10" Alignment="Center" Height="120" Width="350">
+		 			<SolidColor Color="f_skyblue" />
+		 			<Grid Columns="3*,6*,1*">
+		 				<Grid Rows="7*,2*">
+		 					<Rectangle Width="70" Height="70" Alignment="BottomCenter" Margin="10,10,10,10" CornerRadius="50,50,50,50" Color="f_white">
+								<ImageFill File="{example_profile_photo}" StretchMode="Uniform" StretchDirection="Both"/>
+							</Rectangle>
+							<Text Value=" Dad" Font="Roboto_Bold" TextColor="f_blue" TextAlignment="Center" />
+		 				</Grid>
+		 				<StackPanel ContentAlignment="CenterLeft">
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Number : **** - **** - **** - 6689" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Bank Name : Hana Bank" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Holder Name : Chang Kee Park" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Currency : KRW" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Recent Transaction : 2017.04.19" />
+		 				</StackPanel>
+		 				<Grid RowCount="2">
+		 					<Text Value="&#xf142;" Font="fa" Color="f_blue" FontSize="20" Alignment="TopCenter" Margin="10" />
+		 					<Text Value="&#xf006;" Font="fa" Color="f_blue" FontSize="15" Alignment="BottomRight" Margin="10" />
+		 				</Grid>
+		 			</Grid>
+		 		</Rectangle>
+
+		 		<Rectangle Margin="10,10,10,5" CornerRadius="10,10,10,10" Alignment="Center" Height="120" Width="350">
+		 			<SolidColor Color="f_skyblue" />
+		 			<Grid Columns="3*,6*,1*">
+		 				<Grid Rows="7*,2*">
+		 					<Rectangle Width="70" Height="70" Alignment="BottomCenter" Margin="10,10,10,10" CornerRadius="50,50,50,50" Color="f_white">
+								<ImageFill File="{example_profile_photo}" StretchMode="Uniform" StretchDirection="Both"/>
+							</Rectangle>
+							<Text Value=" Chloe" Font="Roboto_Bold" TextColor="f_blue" TextAlignment="Center" />
+		 				</Grid>
+		 				<StackPanel ContentAlignment="CenterLeft">
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Number : **** - **** - **** - 2368" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Bank Name : Citi Bank" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Holder Name : Min Kyung Kim" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Currency : USD" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Recent Transaction : 2017.04.09" />
+		 				</StackPanel>
+		 				<Grid RowCount="2">
+		 					<Text Value="&#xf142;" Font="fa" Color="f_blue" FontSize="20" Alignment="TopCenter" Margin="10" />
+		 					<Text Value="&#xf005;" Font="fa" Color="f_blue" FontSize="15" Alignment="BottomRight" Margin="10" />
+		 				</Grid>
+		 			</Grid>
+		 		</Rectangle>
+
+		 		<Rectangle Margin="10,10,10,5" CornerRadius="10,10,10,10" Alignment="Center" Height="120" Width="350">
+		 			<SolidColor Color="f_skyblue" />
+		 			<Grid Columns="3*,6*,1*">
+		 				<Grid Rows="7*,2*">
+		 					<Rectangle Width="70" Height="70" Alignment="BottomCenter" Margin="10,10,10,10" CornerRadius="50,50,50,50" Color="f_white">
+								<ImageFill File="{example_profile_photo}" StretchMode="Uniform" StretchDirection="Both"/>
+							</Rectangle>
+							<Text Value=" Yeseul" Font="Roboto_Bold" TextColor="f_blue" TextAlignment="Center" />
+		 				</Grid>
+		 				<StackPanel ContentAlignment="CenterLeft">
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Number : **** - **** - **** - 0098" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Bank Name : Hang Seng Bank" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Account Holder Name : Ye Seul Kwon" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Currency : HKD" />
+		 					<Text Font="Roboto_Light" FontSize="13" Value="Recent Transaction : 2017.03.29" />
+		 				</StackPanel>
+		 				<Grid RowCount="2">
+		 					<Text Value="&#xf142;" Font="fa" Color="f_blue" FontSize="20" Alignment="TopCenter" Margin="10,10,10,2" />
+		 					<Text Value="&#xf006;" Font="fa" Color="f_blue" FontSize="15" Alignment="BottomRight" Margin="10" />
+		 				</Grid>
+		 			</Grid>
+		 		</Rectangle>
+	 		</StackPanel>
+	 	</ScrollView>
+ 	</Panel>
+
+	<Grid ux:Class="Summary_C" Columns="2*, auto, 2*, auto, 2*" Height="50" Background="s_skyblue">
+		<Grid Rows="6*,4*">
+			<Text Value="&#xf2b9;" Font="fa" Color="f_blue" FontSize="18" Alignment="BottomCenter" />
+			<Text TextColor="f_blue" Alignment="Center" FontSize="11">Contacts</Text>
+		</Grid>
+		
+		<Divider2 />
+
+		<Grid Rows="6*,4*">
+			<Text Value="&#xf005;" Font="fa" Color="f_blue" FontSize="18" Alignment="BottomCenter" />
+			<Text TextColor="f_blue" Alignment="Center" FontSize="11">Favorites</Text>
+		</Grid>
+
+		<Divider2 />
+
+		<Grid Rows="6*,4*">
+			<Text Value="&#xf230;" Font="fa" Color="f_blue" FontSize="18" Alignment="BottomCenter" />
+			<Text TextColor="f_blue" Alignment="Center" FontSize="11">Invite Friends</Text>
+		</Grid>
+	</Grid>
+	<DockPanel>
+		<Panel Height="50" Background="s_blue" Dock="Top">
+			<Text Alignment="Center" Margin="15" FontSize="20" TextColor="f_white" Font="Roboto_Bold" Value="Contacts" />
+			<Text Value="&#xf013;" Font="fa" Color="f_white" FontSize="20" Alignment="CenterRight" Margin="15" />
+		</Panel>
+		<Contacts />
+		<NavDock Dock="Bottom" router="router" />
+		<Rectangle Dock="Bottom" Height="2" Color="f_white" />
+		<Summary_C Dock="Bottom" />
+		<Rectangle Dock="Bottom" Height="2" Color="f_white" />
+	</DockPanel>
+
+	<JavaScript>
+		var example_profile_photo = "../../assets/images/example_profile_photo.png"
+
+		module.exports = {
+			example_profile_photo: example_profile_photo
+		};
+	</JavaScript>
+</Page>
